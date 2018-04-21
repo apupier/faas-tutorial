@@ -787,9 +787,16 @@ The above action invoke should result in response like:
 
 ==== Integration with External Applications
 
+
 The real use of functions is its ability to listen to external world events and fire themselves when such events happens. In this section we will see how to integrate Functions with external world applications. For the demo sake we will making our Functions integrated with Slack. This integration stripped down version of the OpenWhisk demo app available at https://github.com/IBM-Cloud/openwhisk-slackapp[openwhisk-slackapp].
 
-===== Slack Configuration
+===== Message Broker Integration
+
+link:./solutions/messaging-functions/README.adoc[Message Functions]
+
+===== Slack Bot Integration
+
+====== Slack Configuration
 
 - https://github.com/IBM-Cloud/openwhisk-slackapp#create-the-slack-app[Create Slack App] 
 
@@ -805,7 +812,7 @@ Since we will be doing a manual registration of the application we might need to
 
 * BOT_OAUTH_TOKEN - The Bot Authorization token after installing the application in your Slack workspace 
 
-===== Build and Deploy
+====== Build and Deploy
 
 [source,sh]
 -----
