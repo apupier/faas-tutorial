@@ -4,10 +4,10 @@ import json
 def main(args):
     body = json.loads(args["body"])
     text = body.get("text", "NODATA")
-    replyQ = body.get("replyQ", "DLQ")
+    replyTo = body.get("replyTo", "DLQ")
     print("Got Message : %s, \n Reply Queue: %s \n" %
-          (text, replyQ))
+          (text, replyTo))
     r = {}
     r["result"] = text.split(",")
-    r["replyQ"] = replyQ
+    r["replyTo"] = replyTo
     return r
